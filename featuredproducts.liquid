@@ -1,0 +1,31 @@
+{% schema %}
+{
+  "name": "Featured products",
+  "tag": "section",
+  "settings": [
+    { "type":"text", "id":"title", "label":"Title", "default":"Featured Products" },
+    { "type":"collection", "id":"collection", "label":"Source collection" },
+    { "type":"range", "id":"limit", "label":"Product count", "min":1, "max":12, "default":4 }
+  ],
+  "presets": [{ "name":"Featured products" }]
+}
+{% endschema %}
+
+<section class="vh-featured">
+  <div class="vh-container">
+    <h2 class="vh-section-title">{{ section.settings.title }}</h2>
+    <div class="vh-grid">
+      {% assign coll = collections[section.settings.collection] %}
+      {% for product in coll.products | limit: section.settings.limit %}
+        {% render 'product-card', product: product %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<style>
+.vh-section-title { color:#e8f1f5; font-size:1.6rem; margin-bottom:16px; }
+.vh-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
+@media (max-width: 960px){ .vh-grid{ grid-template-columns:repeat(2,1fr);} }
+@media (max-width: 600px){ .vh-grid{ grid-template-columns:1fr;} }
+</style>
