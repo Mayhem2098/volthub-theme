@@ -1,0 +1,36 @@
+<footer class="vh-footer">
+  <div class="vh-container vh-footer-grid">
+    <div>
+      <h4>VoltHub</h4>
+      <p>Modern tech, fairly priced.</p>
+    </div>
+    <div>
+      <h4>Shop</h4>
+      <ul>
+        <li><a href="/collections/accessories">Accessories</a></li>
+        <li><a href="/collections/smart-devices">Smart Devices</a></li>
+        <li><a href="/collections/wearables">Wearables</a></li>
+        <li><a href="/collections/home-tech">Home Tech</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Support</h4>
+      <ul>
+        <li><a href="/pages/contact">Contact</a></li>
+        <li><a href="/policies/shipping-policy">Shipping</a></li>
+        <li><a href="/policies/refund-policy">Returns</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="vh-footer-copy">© {{ 'now' | date: '%Y' }} {{ shop.name }}</div>
+</footer>
+
+<style>
+.vh-footer { background:#0a0f12; border-top:1px solid rgba(0,255,140,.1); margin-top:24px; }
+.vh-footer-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; padding:20px; color:#98abb4; }
+.vh-footer h4 { color:#dfe9ee; margin-bottom:8px; }
+.vh-footer a { color:#b6c2c9; text-decoration:none; }
+.vh-footer a:hover { color:#22ff88; }
+.vh-footer-copy { border-top:1px solid rgba(255,255,255,.06); text-align:center; padding:12px; color:#6f858f; }
+@media (max-width: 760px){ .vh-footer-grid{ grid-template-columns:1fr; } }
+</style>
