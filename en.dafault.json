@@ -1,0 +1,10 @@
+{
+  "general": {
+    "search": "Search",
+    "cart": "Cart",
+    "shop_now": "Shop Now"
+  },
+  "sections": {
+    "featured_products": { "title": "Featured Products" }
+  }
+}
