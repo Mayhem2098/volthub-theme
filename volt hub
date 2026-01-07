@@ -1,0 +1,32 @@
+Highlight>"Welcome to the Volthub Theme Repository!
+volthub-theme/
+├─ assets/
+│  ├─ theme.css
+│  ├─ theme.js
+│  ├─ volthub-logo.svg
+│  ├─ hero-bg.jpg
+├─ config/
+│  ├─ settings_schema.json
+│  ├─ settings_data.json
+├─ layout/
+│  ├─ theme.liquid
+├─ locales/
+│  ├─ en.default.json
+├─ sections/
+│  ├─ header.liquid
+│  ├─ footer.liquid
+│  ├─ hero.liquid
+│  ├─ featured-products.liquid
+│  ├─ promo-bar.liquid
+│  ├─ collection-grid.liquid
+├─ snippets/
+│  ├─ product-card.liquid
+│  ├─ icon.liquid
+│  ├─ price.liquid
+├─ templates/
+│  ├─ index.json
+│  ├─ product.json
+│  ├─ collection.json
+│  ├─ page.json
+│  ├─ 404.json
+│  ├─ cart.json
