@@ -1,0 +1,20 @@
+{% schema %}
+{
+  "name":"Collection grid",
+  "settings":[
+    { "type":"range","id":"per_row","label":"Products per row","min":2,"max":4,"step":1,"default":4 }
+  ],
+  "presets":[{ "name":"Collection grid" }]
+}
+{% endschema %}
+
+<section class="vh-collection">
+  <div class="vh-container">
+    <h1 class="vh-section-title">{{ collection.title }}</h1>
+    <div class="vh-grid" style="grid-template-columns:repeat({{ section.settings.per_row }},1fr);">
+      {% for product in collection.products %}
+        {% render 'product-card', product: product %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
