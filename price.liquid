@@ -1,0 +1,16 @@
+{% liquid
+  assign price = product.price | money
+  assign compare = product.compare_at_price
+%}
+<div class="vh-price">
+  {% if compare > product.price %}
+    <span class="vh-price-compare">{{ compare | money }}</span>
+  {% endif %}
+  <span class="vh-price-current">{{ price }}</span>
+</div>
+
+<style>
+.vh-price { display:flex; gap:8px; align-items:center; margin-bottom:10px; }
+.vh-price-compare { color:#8fa3ad; text-decoration:line-through; }
+.vh-price-current { color:#22ff88; font-weight:800; }
+</style>
