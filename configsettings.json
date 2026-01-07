@@ -1,0 +1,11 @@
+[
+  {
+    "name": "Theme settings",
+    "settings": [
+      { "type": "image_picker", "id": "logo", "label": "Logo" },
+      { "type": "color", "id": "accent", "label": "Accent color", "default": "#22ff88" },
+      { "type": "color", "id": "background", "label": "Background color", "default": "#0a0f12" },
+      { "type": "text", "id": "promo_text", "label": "Promo bar text", "default": "Free delivery in Harare on orders over $50" }
+    ]
+  }
+]
