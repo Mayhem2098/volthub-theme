@@ -1,0 +1,29 @@
+<header class="vh-header">
+  <div class="vh-container">
+    <a href="{{ routes.root_url }}" class="vh-logo">
+      <img src="{{ 'volthub-logo.svg' | asset_url }}" alt="{{ shop.name }}">
+    </a>
+
+    <nav class="vh-nav">
+      <ul>
+        <li><a href="/collections/accessories">Accessories</a></li>
+        <li><a href="/collections/smart-devices">Smart Devices</a></li>
+        <li><a href="/collections/wearables">Wearables</a></li>
+        <li><a href="/collections/home-tech">Home Tech</a></li>
+      </ul>
+    </nav>
+
+    <div class="vh-actions">
+      <a href="{{ routes.cart_url }}" class="vh-btn-outline">Cart ({{ cart.item_count }})</a>
+    </div>
+  </div>
+</header>
+
+<style>
+.vh-header { background:#0a0f12; border-bottom:1px solid rgba(0,255,140,.1); position:sticky; top:0; z-index:20; }
+.vh-container { display:flex; align-items:center; justify-content:space-between; padding:12px 20px; }
+.vh-nav ul { display:flex; gap:16px; }
+.vh-nav a { color:#b6c2c9; text-decoration:none; }
+.vh-nav a:hover { color:#22ff88; }
+.vh-btn-outline { border:1px solid #22ff88; color:#22ff88; padding:8px 12px; border-radius:8px; text-decoration:none; }
+</style>
