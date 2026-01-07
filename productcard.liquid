@@ -1,0 +1,22 @@
+<article class="vh-card">
+  <a href="{{ product.url }}" class="vh-card-media">
+    {% if product.featured_image %}
+      <img src="{{ product.featured_image | image_url: width: 600 }}" alt="{{ product.featured_image.alt | escape }}">
+    {% else %}
+      <div class="vh-card-placeholder">No image</div>
+    {% endif %}
+  </a>
+  <div class="vh-card-body">
+    <h3 class="vh-card-title">{{ product.title }}</h3>
+    {% render 'price', product: product %}
+    <a href="{{ product.url }}" class="vh-btn-sm">Shop Now</a>
+  </div>
+</article>
+
+<style>
+.vh-card { background:#0e1418; border:1px solid rgba(34,255,136,.12); border-radius:12px; overflow:hidden; }
+.vh-card-media img { width:100%; display:block; }
+.vh-card-body { padding:12px; }
+.vh-card-title { color:#d7e4ea; font-size:1rem; margin-bottom:8px; }
+.vh-btn-sm { display:inline-block; background:#22ff88; color:#07110d; padding:8px 10px; border-radius:8px; text-decoration:none; font-weight:700; }
+</style>
