@@ -1,0 +1,17 @@
+:root {
+  --bg: #0a0f12;
+  --panel: #0e1418;
+  --text: #dfe9ee;
+  --muted: #9eb1ba;
+  --accent: #22ff88;
+  --accent-2: #00d06f;
+}
+
+html, body { background: var(--bg); color: var(--text); font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+.vh-container { width: min(1100px, 92%); margin: 0 auto; }
+a { transition: color .15s ease, background .15s ease, opacity .15s ease; }
+
+.vh-btn { background: var(--accent); color: #07110d; border-radius: 10px; padding: 12px 18px; text-decoration: none; font-weight: 700; }
+.vh-btn-outline { border: 1px solid var(--accent); color: var(--accent); border-radius: 10px; padding: 10px 14px; text-decoration: none; font-weight: 700; }
+
+.vh-section-title { font-weight: 800; letter-spacing: 0.3px; }
